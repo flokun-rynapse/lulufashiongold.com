@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/flokun-rynapse/Lulu-Fashion-Gold-Logo/main/Lulu_Logo-removebg-preview.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>LuLu Fashion Gold | Premium Jewellery</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fefcf5;
+            color: #2d2a24;
+            scroll-behavior: smooth;
+            line-height: 1.5;
+            overflow-x: hidden;
+        }
+
+        :root {
+            --gold: #C9A03D;
+            --gold-dark: #aa8233;
+            --gold-light: #f7e9c3;
+            --gold-glow: rgba(201, 160, 61, 0.2);
+            --bg-light: #ffffff;
+            --bg-card: #ffffff;
+            --bg-elevated: #fffaf0;
+            --border-gold: rgba(201, 160, 61, 0.35);
+            --text-dark: #2c2a24;
+            --text-muted: #6b6256;
+        }
+
+        h1, h2, h3, .section-title {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            color: #2c2a24;
+        }
+
+        .logo-cursive {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #C9A03D 0%, #e4bc6e 40%, #C9A03D 70%, #aa8233 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: shine 3s linear infinite;
+            transition: all 0.3s ease;
+            letter-spacing: 1px;
+        }
+
+        @keyframes shine {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 200% 50%; }
+        }
+
+        .logo-cursive:hover {
+            transform: scale(1.02);
+            text-shadow: 0 0 30px rgba(201, 160, 61, 0.3);
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .gold-text {
+            color: #C9A03D;
+        }
+
+        /* Buttons - Gold & White elegance */
+        .btn-gold {
+            display: inline-block;
+            background: linear-gradient(105deg, #C9A03D 0%, #dbb35c 50%, #C9A03D 100%);
+            background-size: 200% auto;
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 1.1rem;
+            padding: 14px 32px;
+            border-radius: 60px;
+            text-decoration: none;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 8px 18px rgba(201, 160, 61, 0.3);
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            font-family: 'Inter', sans-serif;
+            letter-spacing: 0.3px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-gold::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .btn-gold:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-5px) scale(1.02);
+            background-position: 100% 0;
+            box-shadow: 0 12px 28px rgba(201, 160, 61, 0.4);
+        }
+
+        .btn-outline-gold {
+            background: transparent;
+            border: 2px solid #C9A03D;
+            color: #C9A03D;
+            box-shadow: none;
+        }
+
+        .btn-outline-gold:hover {
+            background: #C9A03D;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* Header - light theme */
+        .header {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 252, 245, 0.96);
+            backdrop-filter: blur(12px);
+            z-index: 1000;
+            padding: 16px 0;
+            border-bottom: 1px solid rgba(201, 160, 61, 0.3);
+            box-shadow: 0 2px 12px rgba(0,0,0,0.02);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .nav-btn {
+            background: transparent;
+            border: 1px solid rgba(201, 160, 61, 0.5);
+            color: #C9A03D;
+            padding: 8px 20px;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .nav-btn:hover {
+            background: rgba(201, 160, 61, 0.1);
+            border-color: #C9A03D;
+            transform: translateY(-2px);
+            color: #aa8233;
+        }
+
+        section {
+            padding: 80px 0;
+            position: relative;
+        }
+
+        .section-title {
+            font-size: 2.6rem;
+            text-align: center;
+            margin-bottom: 48px;
+            position: relative;
+            color: #2c2a24;
+        }
+
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, #C9A03D, #f3e0b0);
+            margin: 16px auto 0;
+            border-radius: 4px;
+            animation: expandWidth 0.8s ease-out;
+        }
+
+        @keyframes expandWidth {
+            from { width: 0; opacity: 0; }
+            to { width: 80px; opacity: 1; }
+        }
+
+        /* ========= SCROLL ORNAMENTS ANIMATION ========= */
+        .ornament-scroll {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            z-index: 999;
+            pointer-events: none;
+        }
+
+        .ornament-item {
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, #fff5e6, #fffef9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(201, 160, 61, 0.25);
+            border: 1px solid rgba(201, 160, 61, 0.5);
+            opacity: 0;
+            transform: scale(0) rotate(0deg);
+            transition: all 0.5s cubic-bezier(0.34, 1.2, 0.64, 1);
+            font-size: 1.3rem;
+            color: #C9A03D;
+            backdrop-filter: blur(4px);
+        }
+
+        .ornament-item.visible {
+            opacity: 1;
+            transform: scale(1) rotate(360deg);
+        }
+
+        .ornament-item:nth-child(1) { transition-delay: 0.1s; }
+        .ornament-item:nth-child(2) { transition-delay: 0.2s; }
+        .ornament-item:nth-child(3) { transition-delay: 0.3s; }
+        .ornament-item:nth-child(4) { transition-delay: 0.4s; }
+        .ornament-item:nth-child(5) { transition-delay: 0.5s; }
+
+        /* Floating corner ornaments */
+        .floating-ornament {
+            position: fixed;
+            font-size: 2rem;
+            opacity: 0;
+            pointer-events: none;
+            z-index: 98;
+            transition: opacity 0.8s ease, transform 0.6s ease;
+            color: rgba(201, 160, 61, 0.25);
+        }
+
+        .floating-ornament.ornament-show {
+            opacity: 0.6;
+            transform: scale(1);
+        }
+
+        .ornament-tl { top: 15%; left: 2%; transform: rotate(-15deg); }
+        .ornament-tr { top: 25%; right: 2%; transform: rotate(10deg); }
+        .ornament-bl { bottom: 20%; left: 1.5%; transform: rotate(5deg); }
+        .ornament-br { bottom: 30%; right: 1.5%; transform: rotate(-8deg); }
+
+        /* Hero sparkle overlay */
+        .sparkle-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .sparkle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #C9A03D;
+            border-radius: 50%;
+            opacity: 0;
+            animation: sparkleFloat 4s infinite;
+        }
+
+        @keyframes sparkleFloat {
+            0% { opacity: 0; transform: translateY(0) scale(0); }
+            20% { opacity: 0.7; transform: translateY(-20px) scale(1); }
+            80% { opacity: 0.4; transform: translateY(-60px) scale(0.8); }
+            100% { opacity: 0; transform: translateY(-100px) scale(0); }
+        }
+
+        /* Hero - white/gold background */
+        .hero {
+            background: linear-gradient(125deg, #fffaf0 0%, #fffcf5 100%);
+            position: relative;
+            overflow: hidden;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(201, 160, 61, 0.05) 0%, transparent 70%);
+            animation: rotateBg 25s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes rotateBg {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .hero-grid {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 50px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-content {
+            flex: 1.2;
+        }
+
+        .hero-headline {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            animation: fadeInUp 0.8s ease-out;
+            color: #2c2a24;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero-sub {
+            font-size: 1.2rem;
+            color: #5f5749;
+            margin-bottom: 32px;
+            animation: fadeInUp 0.8s ease-out 0.1s backwards;
+        }
+
+        .hero-image {
+            flex: 1;
+            text-align: center;
+            animation: float 5s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            border-radius: 28px;
+            box-shadow: 0 20px 35px -12px rgba(201, 160, 61, 0.25);
+            transition: all 0.4s;
+            background: #fff5e6;
+        }
+
+        .trust-badge-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 32px;
+            animation: fadeInUp 0.8s ease-out 0.2s backwards;
+        }
+
+        .badge {
+            background: #ffffff;
+            backdrop-filter: blur(4px);
+            padding: 8px 20px;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border-left: 3px solid #C9A03D;
+            transition: all 0.3s;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+            color: #4a4338;
+        }
+
+        .badge:hover {
+            transform: translateX(5px);
+            background: #fff7ed;
+            border-left-color: #e6bc6b;
+        }
+
+        /* Cards - white with gold accents */
+        .review-card, .product-card, .feature, .map-card, .form-section {
+            background: #ffffff;
+            border-radius: 32px;
+            border: 1px solid var(--border-gold);
+            transition: all 0.4s;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.02);
+        }
+
+        .review-card:hover, .product-card:hover, .feature:hover, .map-card:hover {
+            transform: translateY(-8px);
+            border-color: #C9A03D;
+            box-shadow: 0 20px 30px -12px rgba(201, 160, 61, 0.2);
+        }
+
+        .reviews-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        .review-card {
+            background: #ffffff;
+            padding: 30px 28px;
+            flex: 1;
+            min-width: 260px;
+        }
+
+        .stars {
+            color: #C9A03D;
+            margin-bottom: 16px;
+            font-size: 1.3rem;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 32px;
+            margin-bottom: 40px;
+        }
+
+        .product-card {
+            text-align: center;
+            padding: 32px 20px;
+            cursor: pointer;
+            background: white;
+        }
+
+        .product-icon {
+            font-size: 3.2rem;
+            color: #C9A03D;
+            margin-bottom: 18px;
+            display: inline-block;
+            transition: transform 0.4s;
+        }
+
+        .product-card:hover .product-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .features-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 28px;
+            margin-bottom: 40px;
+        }
+
+        .feature {
+            flex: 1;
+            min-width: 200px;
+            padding: 30px 20px;
+            text-align: center;
+            background: white;
+        }
+
+        .feature i {
+            font-size: 2.3rem;
+            color: #C9A03D;
+            margin-bottom: 18px;
+            display: inline-block;
+            transition: transform 0.5s;
+        }
+
+        .feature:hover i {
+            transform: rotateY(360deg);
+        }
+
+        /* Map section */
+        .map-card {
+            overflow: hidden;
+            margin-bottom: 40px;
+        }
+
+        .map-placeholder iframe {
+            width: 100%;
+            height: 350px;
+            border: 0;
+        }
+
+        .address-block {
+            padding: 32px;
+            background: white;
+        }
+        
+        .address-block p {
+            margin-bottom: 18px;
+            line-height: 1.6;
+            color: #3d382f;
+        }
+        
+        /* Form - light gold theme */
+        .form-section {
+            background: #ffffff;
+            margin-bottom: 20px;
+            border-radius: 48px;
+        }
+
+        .form-inner {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+            padding: 50px 40px;
+        }
+        
+        .form-text {
+            flex: 1;
+        }
+        
+        .form-text h2 {
+            margin-bottom: 20px;
+            color: #C9A03D;
+        }
+        
+        .form-text p, .form-text ul li {
+            color: #3d382f;
+        }
+        
+        .form-text ul li {
+            margin-bottom: 14px;
+        }
+        
+        .form-box {
+            flex: 1;
+            background: #fffcf5;
+            padding: 40px 32px;
+            border-radius: 32px;
+            border: 1px solid rgba(201, 160, 61, 0.25);
+        }
+
+        .input-group {
+            margin-bottom: 22px;
+        }
+        
+        .input-group input, .input-group select {
+            width: 100%;
+            padding: 14px 20px;
+            border-radius: 48px;
+            border: 1px solid #e2dcd0;
+            background: white;
+            color: #2d2a24;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .input-group input:focus, .input-group select:focus {
+            outline: none;
+            border-color: #C9A03D;
+            box-shadow: 0 0 0 3px rgba(201, 160, 61, 0.2);
+        }
+        
+        .microcopy {
+            margin-top: 22px;
+            text-align: center;
+            color: #8b836f;
+            font-size: 0.85rem;
+        }
+
+        /* Urgency block - white and gold shimmer */
+        .urgency {
+            background: linear-gradient(115deg, #fff8ec 0%, #fffef9 100%);
+            border-radius: 48px;
+            text-align: center;
+            padding: 50px 32px;
+            border: 1px solid rgba(201, 160, 61, 0.5);
+            margin-bottom: 50px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.02);
+            animation: subtleBorderPulse 2.5s infinite;
+        }
+        
+        .urgency h2 {
+            margin-bottom: 18px;
+            color: #C9A03D;
+        }
+        
+        .urgency p {
+            margin-bottom: 28px;
+            font-size: 1.2rem;
+            color: #4f483b;
+        }
+
+        @keyframes subtleBorderPulse {
+            0%, 100% { border-color: rgba(201, 160, 61, 0.3); box-shadow: 0 0 0 0 rgba(201, 160, 61, 0.08); }
+            50% { border-color: rgba(201, 160, 61, 0.7); box-shadow: 0 0 18px 0 rgba(201, 160, 61, 0.12); }
+        }
+
+        /* Floating buttons */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 32px;
+            text-decoration: none;
+            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.3);
+            z-index: 1000;
+            transition: all 0.3s;
+            animation: waPulse 2s infinite;
+        }
+
+        @keyframes waPulse {
+            0%, 100% { transform: scale(1); box-shadow: 0 5px 20px rgba(37, 211, 102, 0.3); }
+            50% { transform: scale(1.08); box-shadow: 0 5px 30px rgba(37, 211, 102, 0.5); }
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.12);
+            background: #20b859;
+        }
+
+        .bottom-right-btn {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            z-index: 1000;
+            box-shadow: 0 8px 22px rgba(201, 160, 61, 0.3);
+            background: linear-gradient(105deg, #C9A03D, #dbb35c);
+            color: white;
+            border-radius: 60px;
+            padding: 12px 28px;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        
+        /* Footer - light */
+        .footer {
+            background: #faf7f0;
+            padding: 60px 0 30px;
+            border-top: 1px solid rgba(201, 160, 61, 0.3);
+            margin-top: 20px;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-info p, .footer-info a {
+            color: #4a4338;
+        }
+        
+        .footer-info a {
+            color: #C9A03D;
+            text-decoration: none;
+        }
+        
+        .center-btn {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .mt-40 {
+            margin-top: 40px;
+        }
+        
+        hr {
+            border-color: #ece3d4;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-headline { font-size: 2.2rem; }
+            .section-title { font-size: 1.9rem; }
+            section { padding: 50px 0; }
+            .logo-cursive { font-size: 1.6rem; }
+            .nav-links { gap: 12px; justify-content: center; }
+            .nav-btn { padding: 6px 14px; font-size: 0.8rem; }
+            .form-inner { padding: 30px 20px; gap: 30px; }
+            .footer-content { flex-direction: column; text-align: center; }
+            .bottom-right-btn { padding: 10px 20px; font-size: 0.85rem; left: 20px; bottom: 20px; }
+            .whatsapp-float { right: 20px; bottom: 20px; width: 50px; height: 50px; font-size: 26px; }
+            .ornament-scroll { right: 8px; gap: 12px; }
+            .ornament-item { width: 35px; height: 35px; font-size: 1rem; }
+            .floating-ornament { font-size: 1.2rem; opacity: 0.2; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- SCROLL ORNAMENTS ANIMATION (Sidebar ornaments that appear on scroll) -->
+<div class="ornament-scroll">
+    <div class="ornament-item"><i class="fas fa-gem"></i></div>
+    <div class="ornament-item"><i class="fas fa-crown"></i></div>
+    <div class="ornament-item"><i class="fas fa-star"></i></div>
+    <div class="ornament-item"><i class="fas fa-ring"></i></div>
+    <div class="ornament-item"><i class="fas fa-spa"></i></div>
+</div>
+
+<!-- Floating corner ornaments that appear gradually -->
+<div class="floating-ornament ornament-tl"><i class="fas fa-feather-alt"></i></div>
+<div class="floating-ornament ornament-tr"><i class="fas fa-mandolin"></i></div>
+<div class="floating-ornament ornament-bl"><i class="fas fa-dharmachakra"></i></div>
+<div class="floating-ornament ornament-br"><i class="fas fa-infinity"></i></div>
+
+<a href="https://wa.me/919747120315?text=Hello!%20I%20would%20like%20to%20know%20about%20the%20current%20offers%20on%20Lulu%20Fashion%20gold." class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<a href="#lead-form" class="btn-gold bottom-right-btn" style="padding: 12px 28px; font-size: 0.95rem;">✨ Get Latest Gold Offers</a>
+
+<header class="header">
+    <div class="container header-content">
+        <div class="logo-cursive" data-aos="fade-right">LuLu Fashion Gold</div>
+        <div class="nav-links">
+            <button class="nav-btn" onclick="scrollToSection('reviews-section')">⭐ Reviews</button>
+            <button class="nav-btn" onclick="scrollToSection('products-section')">💎 Collections</button>
+            <button class="nav-btn" onclick="scrollToSection('features-section')">✨ Why Us</button>
+            <button class="nav-btn" onclick="scrollToSection('map-section')">📍 Location</button>
+            <button class="nav-btn" onclick="scrollToSection('lead-form')">📞 Contact</button>
+        </div>
+    </div>
+</header>
+
+<section class="hero" id="hero">
+    <div class="sparkle-overlay" id="sparkleOverlay"></div>
+    <div class="container hero-grid">
+        <div class="hero-content">
+            <h1 class="hero-headline">Shine Brighter with <span class="gold-text">Timeless Gold</span></h1>
+            <p class="hero-sub">Discover premium certified jewellery at LuLu Fashion Gold – where tradition meets modern elegance. Trusted by Kerala families for generations.</p>
+            <a href="#lead-form" class="btn-gold">✨ Get Latest Gold Offers</a>
+            <div class="trust-badge-row">
+                <span class="badge"><i class="fas fa-certificate"></i> BIS Hallmark</span>
+                <span class="badge"><i class="fas fa-rupee-sign"></i> Transparent Pricing</span>
+                <span class="badge"><i class="fas fa-store"></i> Since 1995</span>
+            </div>
+        </div>
+        <div class="hero-image" data-aos="zoom-in">
+            <img src="Gold1.png" alt="LuLu Fashion Gold Premium Collection">
+        </div>
+    </div>
+</section>
+
+<section id="reviews-section" data-aos="fade-up">
+    <div class="container">
+        <h2 class="section-title">Loved by 5000+ Happy Customers</h2>
+        <div class="reviews-grid">
+            <div class="review-card" data-aos="zoom-in" data-aos-delay="100">
+                <div class="stars">★★★★★</div>
+                <p class="review-text">“Best gold shop in Kozhikode – amazing designs and honest pricing!”</p>
+                <div class="mt-3 gold-text" style="margin-top: 14px;">— Ramesh Nair</div>
+            </div>
+            <div class="review-card" data-aos="zoom-in" data-aos-delay="200">
+                <div class="stars">★★★★★</div>
+                <p class="review-text">“Bought my wedding jewellery here. Excellent service and purity guaranteed.”</p>
+                <div class="mt-3 gold-text" style="margin-top: 14px;">— Anjali Krishnan</div>
+            </div>
+            <div class="review-card" data-aos="zoom-in" data-aos-delay="300">
+                <div class="stars">★★★★★</div>
+                <p class="review-text">“Trustworthy brand with stunning collections. Highly recommended!”</p>
+                <div class="mt-3 gold-text" style="margin-top: 14px;">— Faisal P.</div>
+            </div>
+        </div>
+        <div class="center-btn">
+            <a href="#lead-form" class="btn-gold">✨ Get Latest Gold Offers</a>
+        </div>
+    </div>
+</section>
+
+<section id="products-section" style="background: #fefaf2;" data-aos="fade-up">
+    <div class="container">
+        <h2 class="section-title">Exquisite Collections</h2>
+        <div class="products-grid">
+            <div class="product-card" data-aos="flip-left"><div class="product-icon"><i class="fas fa-gem"></i></div><h3>💍 Diamond Rings</h3><p>Solitaire & couple bands</p></div>
+            <div class="product-card" data-aos="flip-left" data-aos-delay="100"><div class="product-icon"><i class="fas fa-link"></i></div><h3>📿 Gold Chains</h3><p>Classic & contemporary</p></div>
+            <div class="product-card" data-aos="flip-left" data-aos-delay="200"><div class="product-icon"><i class="fas fa-crown"></i></div><h3>👑 Bridal Sets</h3><p>Heirloom masterpieces</p></div>
+            <div class="product-card" data-aos="flip-left" data-aos-delay="300"><div class="product-icon"><i class="fas fa-ear-deaf"></i></div><h3>✨ Jhumkas</h3><p>Traditional & trendy</p></div>
+            <div class="product-card" data-aos="flip-left" data-aos-delay="400"><div class="product-icon"><i class="fas fa-coins"></i></div><h3>💰 Gold Coins</h3><p>Investment & gifting</p></div>
+        </div>
+        <div class="center-btn">
+            <a href="#lead-form" class="btn-gold">✨ Explore Offers</a>
+        </div>
+    </div>
+</section>
+
+<section id="features-section" data-aos="fade-up">
+    <div class="container">
+        <h2 class="section-title">Why LuLu Fashion Gold?</h2>
+        <div class="features-grid">
+            <div class="feature" data-aos="flip-up"><i class="fas fa-store"></i><h3>Trusted Brand</h3><p>30+ years of excellence</p></div>
+            <div class="feature" data-aos="flip-up" data-aos-delay="100"><i class="fas fa-certificate"></i><h3>Hallmarked Gold</h3><p>Purity assured</p></div>
+            <div class="feature" data-aos="flip-up" data-aos-delay="200"><i class="fas fa-hand-holding-heart"></i><h3>Lifetime Exchange</h3><p>Buyback guarantee</p></div>
+            <div class="feature" data-aos="flip-up" data-aos-delay="300"><i class="fas fa-truck"></i><h3>Free Home Try-On</h3><p>For select collections</p></div>
+        </div>
+        <div class="center-btn mt-40">
+            <a href="#lead-form" class="btn-gold">✨ Get Latest Gold Offers</a>
+        </div>
+    </div>
+</section>
+
+<section id="map-section" style="background: #fefaf2;" data-aos="fade-up">
+    <div class="container">
+        <h2 class="section-title">Visit Our Showroom</h2>
+        <div class="map-card" data-aos="flip-left" data-aos-delay="200">
+            <div class="map-placeholder">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3910.819529537033!2d75.82888811079954!3d11.420641446933672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba667ccc172e137%3A0xe29f2be5a1b1978e!2sLuLu%20Fashion%20Gold!5e0!3m2!1sen!2sin!4v1774535684701!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="address-block">
+                <p><i class="fas fa-map-marker-alt gold-text"></i> <strong>LuLu Fashion Gold</strong> – Nanmanda, Kozhikode, Kerala - 673001</p>
+                <p><i class="fas fa-clock gold-text"></i> <strong>Opening Hours:</strong> Monday - Sunday: 10:00 AM – 8:00 PM</p>
+                <p><i class="fas fa-phone-alt gold-text"></i> <strong>Contact:</strong> +91 97471 20315</p>
+                <p><i class="fas fa-parking gold-text"></i> <strong>Parking:</strong> Free & Secure Parking Available for 50+ Vehicles</p>
+                <p><i class="fas fa-exchange-alt gold-text"></i> <strong>Exchange:</strong> Old Gold Exchange Available with Best Rates</p>
+                <a href="https://maps.app.goo.gl/Bhft49Rw8txuXAs96" target="_blank" class="btn-outline-gold btn-gold" style="display: inline-block;">📍 Get Directions</a>
+            </div>
+        </div>
+        <div class="center-btn">
+            <a href="#lead-form" class="btn-gold">✨ Get Latest Gold Offers</a>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    <div class="urgency" data-aos="zoom-in">
+        <h2 style="font-family: 'Playfair Display'; font-size: 2rem;">⏳ Limited Time Festival Offer</h2>
+        <p>Get up to 15% off on making charges + Free Silver Coin on purchase above ₹50,000!</p>
+        <a href="#lead-form" class="btn-gold">🔥 Claim Your Offer</a>
+    </div>
+</div>
+
+<section id="lead-form" style="padding-top: 20px;">
+    <div class="container">
+        <div class="form-section" data-aos="fade-up">
+            <div class="form-inner">
+                <div class="form-text">
+                    <h2 style="font-size: 2.2rem;">Get Today's Gold Rate</h2>
+                    <p>Unlock exclusive deals, daily gold rates, and wedding collection previews directly on WhatsApp.</p>
+                    <ul style="list-style: none; padding-left: 0;">
+                        <li>✅ <strong>Live gold rate</strong> updates</li>
+                        <li>✅ <strong>Limited period</strong> discounts</li>
+                        <li>✅ Personal shopping assistance</li>
+                        <li>✅ Free design consultation</li>
+                    </ul>
+                </div>
+                <div class="form-box">
+                    <form id="leadForm">
+                        <div class="input-group">
+                            <input type="text" id="name" placeholder="Your Full Name" required>
+                        </div>
+                        <div class="input-group">
+                            <input type="tel" id="phone" placeholder="Phone Number" required>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" id="message" placeholder="Your Message (e.g., I'm interested in wedding collection)" required>
+                        </div>
+                        <button type="submit" class="btn-gold" style="width: 100%;">✨ Send via WhatsApp</button>
+                        <div class="microcopy">We'll redirect to WhatsApp — tap Send to connect instantly.</div>
+                    </form>
+                    <div id="formSuccessMsg" style="margin-top: 18px; text-align: center; color: #C9A03D; display: none;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-info">
+                <div class="logo-cursive" style="font-size: 2rem;">LuLu Fashion Gold</div>
+                <p>Nanmanda, Kozhikode, Kerala - 673001</p>
+                <p><i class="fas fa-phone-alt gold-text"></i> +91 97471 20315 </p>
+                <p><i class="fas fa-envelope gold-text"></i> hello@lulufashiongold.com</p>
+                <a href="https://maps.app.goo.gl/Bhft49Rw8txuXAs96" target="_blank" style="color: #C9A03D; text-decoration: none;">📍 View on Google Maps →</a>
+            </div>
+            <div class="footer-info">
+                <p><i class="fas fa-clock gold-text"></i> <strong>Store Hours</strong></p>
+                <p>Mon - Sun: 10:00 AM - 8:00 PM</p>
+                <p><i class="fas fa-tag gold-text"></i> <strong>Follow Us</strong></p>
+                <div style="display: flex; gap: 15px; margin-top: 10px;">
+                    <a href="https://www.instagram.com/lulufashiongold/" style="color: #C9A03D; font-size: 1.5rem;"><i class="fab fa-instagram"></i></a>
+                    <a href="#" style="color: #C9A03D; font-size: 1.5rem;"><i class="fab fa-facebook"></i></a>
+                    <a href="#" style="color: #C9A03D; font-size: 1.5rem;"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <hr style="margin: 30px 0 20px; border-color: #e6ddce;">
+        <div style="font-size: 0.8rem; text-align: center; color: #8b826e;">© 2026 LuLu Fashion Gold – Premium Gold Jewellery, Trusted by Kerala Families</div>
+    </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({ duration: 800, once: false, mirror: true, offset: 50 });
+    
+    function scrollToSection(sectionId) {
+        const element = document.getElementById(sectionId);
+        if (element) {
+            const headerOffset = 80;
+            const elementPosition = element.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+            window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+        }
+    }
+
+    // Scroll Ornaments Animation: activate icons based on scroll progress
+    const ornamentItems = document.querySelectorAll('.ornament-item');
+    const floatingOrnaments = document.querySelectorAll('.floating-ornament');
+    
+    function updateOrnamentsOnScroll() {
+        const scrollPercent = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
+        const activeCount = Math.min(ornamentItems.length, Math.floor(scrollPercent * ornamentItems.length) + 1);
+        
+        ornamentItems.forEach((item, idx) => {
+            if (idx < activeCount) {
+                item.classList.add('visible');
+            } else {
+                item.classList.remove('visible');
+            }
+        });
+        
+        // Show floating ornaments progressively
+        if (scrollPercent > 0.1) floatingOrnaments[0]?.classList.add('ornament-show');
+        if (scrollPercent > 0.25) floatingOrnaments[1]?.classList.add('ornament-show');
+        if (scrollPercent > 0.45) floatingOrnaments[2]?.classList.add('ornament-show');
+        if (scrollPercent > 0.65) floatingOrnaments[3]?.classList.add('ornament-show');
+    }
+    
+    window.addEventListener('scroll', updateOrnamentsOnScroll);
+    updateOrnamentsOnScroll();
+    
+    // Sparkle effect in hero section (dynamic ornament animation)
+    const sparkleContainer = document.getElementById('sparkleOverlay');
+    function createSparkle() {
+        if (!sparkleContainer) return;
+        const sparkle = document.createElement('div');
+        sparkle.classList.add('sparkle');
+        const size = Math.random() * 6 + 2;
+        sparkle.style.width = `${size}px`;
+        sparkle.style.height = `${size}px`;
+        sparkle.style.left = `${Math.random() * 100}%`;
+        sparkle.style.top = `${Math.random() * 100}%`;
+        sparkle.style.animationDuration = `${Math.random() * 2 + 2}s`;
+        sparkle.style.animationDelay = `${Math.random() * 3}s`;
+        sparkleContainer.appendChild(sparkle);
+        setTimeout(() => sparkle.remove(), 4000);
+    }
+    setInterval(() => createSparkle(), 800);
+    for(let i=0; i<12; i++) setTimeout(() => createSparkle(), i*200);
+    
+    // Form handler
+    const form = document.getElementById('leadForm');
+    const successMsgDiv = document.getElementById('formSuccessMsg');
+    
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const message = document.getElementById('message').value.trim();
+            
+            if (!name) { alert('Please enter your full name.'); return; }
+            if (!phone) { alert('Please enter your phone number.'); return; }
+            if (!message) { alert('Please enter your message / enquiry.'); return; }
+
+            const cleanPhone = phone.replace(/[^0-9+]/g, '');
+            if (cleanPhone.length < 10) { alert('Please enter a valid phone number (min 10 digits).'); return; }
+
+            const whatsappText = `Hello Sir!%0AMy%20Name%20is%20${encodeURIComponent(name)}.%0APhone%20No%20:%20${encodeURIComponent(phone)}.%0AMessage%20:%20${encodeURIComponent(message)}`;
+            const whatsappUrl = `https://wa.me/919747120315?text=${whatsappText}`;
+            
+            try {
+                let leads = localStorage.getItem('luluLeads') ? JSON.parse(localStorage.getItem('luluLeads')) : [];
+                leads.push({ name, phone, message, timestamp: new Date().toISOString() });
+                localStorage.setItem('luluLeads', JSON.stringify(leads));
+            } catch(err) { console.log("storage note"); }
+            
+            successMsgDiv.style.display = 'block';
+            successMsgDiv.innerHTML = `✨ Redirecting to WhatsApp... Thank you ${name}! ✨`;
+            form.reset();
+            
+            setTimeout(() => {
+                window.open(whatsappUrl, '_blank');
+                setTimeout(() => {
+                    successMsgDiv.style.opacity = '0.8';
+                    setTimeout(() => { successMsgDiv.style.display = 'none'; successMsgDiv.innerHTML = ''; }, 1500);
+                }, 2000);
+            }, 500);
+        });
+    }
+    
+    document.querySelectorAll('a[href="#lead-form"]').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const element = document.getElementById('lead-form');
+            if (element) {
+                const headerOffset = 70;
+                const elementPosition = element.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+            }
+        });
+    });
+</script>
+</body>
+</html>
